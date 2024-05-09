@@ -770,6 +770,7 @@ pub fn setup_new_windows_system(
     new_windows: Query<Entity, (Added<Window>, Without<EguiContext>)>,
 ) {
     for window in new_windows.iter() {
+        println!("Setting up a new window: {:?}", window);
         commands.entity(window).insert((
             EguiContext::default(),
             EguiMousePosition::default(),
