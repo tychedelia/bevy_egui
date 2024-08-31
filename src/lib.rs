@@ -796,7 +796,7 @@ pub struct EguiContextQuery {
     /// Stores physical size of the window and its scale factor.
     pub render_target_size: &'static mut RenderTargetSize,
     /// [`Window`] component, when rendering to a window.
-    pub window: Option<&'static mut Window>,
+    pub window: Option<(Entity, &'static mut Window)>,
     /// [`EguiRenderToTextureHandle`] component, when rendering to a texture.
     #[cfg(feature = "render")]
     pub render_to_texture: Option<&'static mut EguiRenderToTextureHandle>,
